@@ -13,13 +13,28 @@
 </head>
 <body>
 
+<!-- ══ LOADING SCREEN ══════════════════════════════════════════ -->
+<div id="loading-screen" aria-hidden="true">
+  <div class="ls-bg"></div>
+  <div class="ls-content">
+    <div class="ls-logo">La <em>Bastia</em></div>
+    <p class="ls-tagline" data-i18n="ls.tagline">Stai entrando alla Bastia di Nogarole Rocca</p>
+    <div class="ls-spinner"></div>
+  </div>
+</div>
+
 <!-- ══ MOBILE MENU ══════════════════════════════════════════════ -->
 <nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile">
-  <a href="index.html" class="active">Home</a>
-  <a href="index.html#chi-siamo">Chi siamo</a>
-  <a href="index.html#specialita">Specialità</a>
-  <a href="menu.html">Menu</a>
-  <a href="contatti.html">Contatti</a>
+  <a href="index.html" class="active" data-i18n="nav.home">Home</a>
+  <a href="index.html#chi-siamo" data-i18n="nav.about">Chi siamo</a>
+  <a href="index.html#specialita" data-i18n="nav.specialita">Specialità</a>
+  <a href="menu.html" data-i18n="nav.menu">Menu</a>
+  <a href="contatti.html" data-i18n="nav.contatti">Contatti</a>
+  <div class="mobile-lang">
+    <button class="lang-btn active" data-lang="it">IT</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="de">DE</button>
+  </div>
 </nav>
 
 <!-- ══ NAVBAR ═══════════════════════════════════════════════════ -->
@@ -27,12 +42,17 @@
   <div class="container nav-inner">
     <a href="index.html" class="nav-logo">La <em>Bastia</em></a>
     <ul class="nav-links" role="list">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="index.html#chi-siamo">Chi siamo</a></li>
-      <li><a href="index.html#specialita">Specialità</a></li>
-      <li><a href="menu.html">Menu</a></li>
-      <li><a href="contatti.html" class="btn btn-amber">Contatti</a></li>
+      <li><a href="index.html" class="active" data-i18n="nav.home">Home</a></li>
+      <li><a href="index.html#chi-siamo" data-i18n="nav.about">Chi siamo</a></li>
+      <li><a href="index.html#specialita" data-i18n="nav.specialita">Specialità</a></li>
+      <li><a href="menu.html" data-i18n="nav.menu">Menu</a></li>
+      <li><a href="contatti.html" class="btn btn-amber" data-i18n="nav.contatti">Contatti</a></li>
     </ul>
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="it">IT</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+    </div>
     <button class="nav-toggle" id="navToggle" aria-label="Apri menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -52,13 +72,13 @@
   </div>
 
   <div class="hero-content">
-    <span class="hero-eyebrow">Ristorante · Pizzeria · Bar &nbsp;·&nbsp; Nogarole Rocca, Verona</span>
+    <span class="hero-eyebrow" data-i18n="hero.eyebrow">Ristorante · Pizzeria · Bar &nbsp;·&nbsp; Nogarole Rocca, Verona</span>
     <h1 class="hero-title">La Bastia</h1>
-    <p class="hero-script">Sapori autentici dal mare e dalla terra</p>
-    <p class="hero-tagline">Pizza, pesce, carne e pasta — tutto con passione artigianale</p>
+    <p class="hero-script" data-i18n="hero.script">Sapori autentici dal mare e dalla terra</p>
+    <p class="hero-tagline" data-i18n="hero.tagline">Pizza, pesce, carne e pasta — tutto con passione artigianale</p>
     <div class="hero-ctas">
-      <a href="menu.html"      class="btn btn-amber">Scopri il menu</a>
-      <a href="contatti.html"  class="btn btn-outline">Dove siamo</a>
+      <a href="menu.html"     class="btn btn-amber"   data-i18n="hero.cta1">Scopri il menu</a>
+      <a href="contatti.html" class="btn btn-outline"  data-i18n="hero.cta2">Dove siamo</a>
     </div>
   </div>
 
@@ -72,9 +92,9 @@
 <!-- ══ STRIP INFO ════════════════════════════════════════════════ -->
 <div id="strip" aria-hidden="true">
   <div class="strip-inner">
-    <div class="strip-item"><span class="ico">🐟</span> Pesce fresco</div>
-    <div class="strip-item"><span class="ico">🍕</span> Pizza artigianale</div>
-    <div class="strip-item"><span class="ico">🥩</span> Carne alla griglia</div>
+    <div class="strip-item"><span class="ico">🐟</span> <span data-i18n="strip.fish">Pesce fresco</span></div>
+    <div class="strip-item"><span class="ico">🍕</span> <span data-i18n="strip.pizza">Pizza artigianale</span></div>
+    <div class="strip-item"><span class="ico">🥩</span> <span data-i18n="strip.meat">Carne alla griglia</span></div>
     <div class="strip-item"><span class="ico">📍</span> Via Roma 36, Nogarole Rocca</div>
     <div class="strip-item"><span class="ico">📞</span> <a href="tel:+390456304370" style="color:inherit">045 630 4370</a></div>
   </div>
@@ -93,17 +113,17 @@
         />
         <div class="chi-badge">
           <div class="num">30+</div>
-          <div class="lbl">anni di passione</div>
+          <div class="lbl" data-i18n="chi.badge">anni di passione</div>
         </div>
       </div>
 
       <div class="chi-text">
-        <h2 class="section-title">Un luogo di<br/>gusto autentico</h2>
+        <h2 class="section-title" data-i18n="chi.title">Un luogo di<br/>gusto autentico</h2>
         <span class="amber-line"></span>
-        <p>La Bastia nasce dall'esperienza de <strong>La Medusa</strong>, storico ristorante che per anni ha fatto parlare di sé per la qualità della cucina. Oggi quella stessa passione e quella stessa cura sono arrivate nel cuore di Nogarole Rocca, nel veronese.</p>
-        <p>Pizze artigianali, carni alla griglia e pasta fatta con cura: una proposta variegata per famiglie, lavoratori e buongustai che non vogliono scendere a compromessi sul gusto.</p>
-        <p>Un ambiente luminoso e familiare, perfetto per ogni occasione — dal pranzo di lavoro alla cena speciale in famiglia.</p>
-        <a href="menu.html" class="btn btn-rust">Sfoglia il menu</a>
+        <p data-i18n="chi.p1">La Bastia nasce dall'esperienza de <strong>La Medusa</strong>, storico ristorante che per anni ha fatto parlare di sé per la qualità della cucina. Oggi quella stessa passione e quella stessa cura sono arrivate nel cuore di Nogarole Rocca, nel veronese.</p>
+        <p data-i18n="chi.p2">Pizze artigianali, carni alla griglia e pasta fatta con cura: una proposta variegata per famiglie, lavoratori e buongustai che non vogliono scendere a compromessi sul gusto.</p>
+        <p data-i18n="chi.p3">Un ambiente luminoso e familiare, perfetto per ogni occasione — dal pranzo di lavoro alla cena speciale in famiglia.</p>
+        <a href="menu.html" class="btn btn-rust" data-i18n="chi.cta">Sfoglia il menu</a>
       </div>
 
     </div>
@@ -127,9 +147,9 @@
       </div>
 
       <div class="spec-text">
-        <h2 class="section-title on-dark">La nostra<br/><em style="color:var(--amber-lt)">specialità</em></h2>
+        <h2 class="section-title on-dark" data-i18n="spec.title">La nostra<br/><em style="color:var(--amber-lt)">specialità</em></h2>
         <span class="amber-line"></span>
-        <p>Il piatto simbolo de La Bastia: gli <strong style="color:var(--amber-lt)">Spaghetti allo Scoglio</strong>. Abbondanti, profumati, generosi — proprio come la nostra cucina.</p>
+        <p data-i18n="spec.p">Il piatto simbolo de La Bastia: gli <strong style="color:var(--amber-lt)">Spaghetti allo Scoglio</strong>. Abbondanti, profumati, generosi — proprio come la nostra cucina.</p>
         <div class="tags">
           <span class="tag">Scampi</span>
           <span class="tag">Gamberi</span>
@@ -138,7 +158,7 @@
           <span class="tag">Moscardini</span>
           <span class="tag">Pomodoro oppure in bianco</span>
         </div>
-        <a href="menu.html#pesce" class="btn btn-amber">Vedi tutto il menu pesce</a>
+        <a href="menu.html#pesce" class="btn btn-amber" data-i18n="spec.cta">Vedi tutto il menu pesce</a>
       </div>
 
     </div>
@@ -148,23 +168,23 @@
 <!-- ══ PERCHÉ NOI ════════════════════════════════════════════════ -->
 <section id="perche" aria-label="Perché sceglierci">
   <div class="container">
-    <h2 class="section-title">Perché scegliere La Bastia</h2>
+    <h2 class="section-title" data-i18n="perche.title">Perché scegliere La Bastia</h2>
     <span class="amber-line"></span>
     <div class="perche-grid">
       <div class="perche-card">
         <div class="perche-icon">🍽️</div>
-        <h3>Porzioni generose</h3>
-        <p>Da noi si mangia davvero. Quantità abbondanti per soddisfare ogni appetito.</p>
+        <h3 data-i18n="perche.card1h">Porzioni generose</h3>
+        <p data-i18n="perche.card1p">Da noi si mangia davvero. Quantità abbondanti per soddisfare ogni appetito.</p>
       </div>
       <div class="perche-card">
         <div class="perche-icon">👨‍👩‍👧</div>
-        <h3>Ambiente familiare</h3>
-        <p>Fatti accogliere da camerieri simpatici e solari, in un posto dove ti senti subito a casa.</p>
+        <h3 data-i18n="perche.card2h">Ambiente familiare</h3>
+        <p data-i18n="perche.card2p">Fatti accogliere da camerieri simpatici e solari, in un posto dove ti senti subito a casa.</p>
       </div>
       <div class="perche-card">
         <div class="perche-icon">👨‍🍳</div>
-        <h3>Cucina di qualità</h3>
-        <p>Ingredienti selezionati, ricette curate e passione artigianale in ogni piatto che esce dalla cucina.</p>
+        <h3 data-i18n="perche.card3h">Cucina di qualità</h3>
+        <p data-i18n="perche.card3p">Ingredienti selezionati, ricette curate e passione artigianale in ogni piatto che esce dalla cucina.</p>
       </div>
     </div>
   </div>
@@ -174,12 +194,12 @@
 <footer id="footer" role="contentinfo">
   <div class="container footer-inner">
     <div class="footer-logo">La <em>Bastia</em></div>
-    <p class="footer-tag">Ristorante · Pizzeria · Bar &nbsp;·&nbsp; Nogarole Rocca, Verona</p>
+    <p class="footer-tag" data-i18n="footer.tag">Ristorante · Pizzeria · Bar &nbsp;·&nbsp; Nogarole Rocca, Verona</p>
     <nav class="footer-nav" aria-label="Link footer">
-      <a href="index.html">Home</a>
-      <a href="index.html#chi-siamo">Chi siamo</a>
-      <a href="menu.html">Menu</a>
-      <a href="contatti.html">Contatti</a>
+      <a href="index.html"            data-i18n="nav.home">Home</a>
+      <a href="index.html#chi-siamo"  data-i18n="nav.about">Chi siamo</a>
+      <a href="menu.html"             data-i18n="nav.menu">Menu</a>
+      <a href="contatti.html"         data-i18n="nav.contatti">Contatti</a>
     </nav>
     <div class="footer-divider"></div>
     <div class="footer-contacts">
@@ -188,12 +208,13 @@
       <a href="https://www.facebook.com/p/La-Bastia-pizzeria-ristorante-61551666945159/" target="_blank" rel="noopener">📘 Facebook</a>
       <a href="https://www.instagram.com/labastiaristorantepizzeria/" target="_blank" rel="noopener">📸 Instagram</a>
     </div>
-    <p class="footer-copy">© 2024 Ristorante Pizzeria La Bastia · P.IVA 000000000</p>
+    <p class="footer-copy" data-i18n="footer.copy">© 2024 Ristorante Pizzeria La Bastia · P.IVA 000000000</p>
   </div>
 </footer>
 
 <button id="scroll-top" aria-label="Torna in cima">↑</button>
 
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

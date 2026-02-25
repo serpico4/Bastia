@@ -35,6 +35,16 @@
   );
 }
 
+/* Soft vignette behind hero text — no hard edges */
+#hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 68% 72% at 50% 46%, rgba(0, 0, 0, 0.46) 0%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
 .hero-wave {
   position: absolute;
   bottom: -2px;

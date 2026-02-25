@@ -3,6 +3,17 @@
    (navbar scroll, mobile menu, scroll-top, active nav link)
 ═══════════════════════════════════════════════════════════════ */
 
+/* ── Loading screen ──────────────────────────────────────────── */
+const loadingScreen = document.getElementById('loading-screen');
+if (loadingScreen) {
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      loadingScreen.classList.add('hidden');
+      setTimeout(() => loadingScreen.remove(), 750);
+    }, 400);
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ── Navbar scroll effect ──────────────────────────────────── */
@@ -43,36 +54,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ── Mobile menu ───────────────────────────────────────────── */
+  /* ── Mobile menu sidebar ───────────────────────────────────── */
   const navToggle  = document.getElementById('navToggle');
   const mobileMenu = document.getElementById('mobileMenu');
 
   if (navToggle && mobileMenu) {
+    // Crea backdrop dinamicamente
+    const backdrop = document.createElement('div');
+    backdrop.className = 'mobile-backdrop';
+    document.body.appendChild(backdrop);
+
+    function openMenu() {
+      mobileMenu.classList.add('active');
+      backdrop.classList.add('active');
+      navToggle.classList.add('open');
+      navToggle.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.remove('active');
+      backdrop.classList.remove('active');
+      navToggle.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
     navToggle.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('active');
-      navToggle.classList.toggle('open', isOpen);
-      navToggle.setAttribute('aria-expanded', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+      mobileMenu.classList.contains('active') ? closeMenu() : openMenu();
     });
 
-    // Chiudi al click su un link
+    backdrop.addEventListener('click', closeMenu);
+
     mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-        navToggle.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      });
+      link.addEventListener('click', closeMenu);
     });
 
-    // Chiudi con tasto ESC
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
-        mobileMenu.classList.remove('active');
-        navToggle.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      }
+      if (e.key === 'Escape') closeMenu();
     });
   }
 

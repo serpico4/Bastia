@@ -15,11 +15,16 @@
 
 <!-- ══ MOBILE MENU ══════════════════════════════════════════════ -->
 <nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile">
-  <a href="index.html">Home</a>
-  <a href="index.html#chi-siamo">Chi siamo</a>
-  <a href="index.html#specialita">Specialità</a>
-  <a href="menu.html" class="active">Menu</a>
-  <a href="contatti.html">Contatti</a>
+  <a href="index.html" data-i18n="nav.home">Home</a>
+  <a href="index.html#chi-siamo" data-i18n="nav.about">Chi siamo</a>
+  <a href="index.html#specialita" data-i18n="nav.specialita">Specialità</a>
+  <a href="menu.html" class="active" data-i18n="nav.menu">Menu</a>
+  <a href="contatti.html" data-i18n="nav.contatti">Contatti</a>
+  <div class="mobile-lang">
+    <button class="lang-btn active" data-lang="it">IT</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="de">DE</button>
+  </div>
 </nav>
 
 <!-- ══ NAVBAR ═══════════════════════════════════════════════════ -->
@@ -27,12 +32,17 @@
   <div class="container nav-inner">
     <a href="index.html" class="nav-logo">La <em>Bastia</em></a>
     <ul class="nav-links" role="list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="index.html#chi-siamo">Chi siamo</a></li>
-      <li><a href="index.html#specialita">Specialità</a></li>
-      <li><a href="menu.html" class="active">Menu</a></li>
-      <li><a href="contatti.html" class="btn btn-amber">Contatti</a></li>
+      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="index.html#chi-siamo" data-i18n="nav.about">Chi siamo</a></li>
+      <li><a href="index.html#specialita" data-i18n="nav.specialita">Specialità</a></li>
+      <li><a href="menu.html" class="active" data-i18n="nav.menu">Menu</a></li>
+      <li><a href="contatti.html" class="btn btn-amber" data-i18n="nav.contatti">Contatti</a></li>
     </ul>
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="it">IT</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+    </div>
     <button class="nav-toggle" id="navToggle" aria-label="Apri menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -41,8 +51,8 @@
 
 <!-- ══ PAGE HEADER ══════════════════════════════════════════════ -->
 <div class="page-header" role="banner">
-  <span class="ph-label">Ristorante Pizzeria La Bastia</span>
-  <h1>Il nostro <em>Menu</em></h1>
+  <span class="ph-label" data-i18n="menu.label">Ristorante Pizzeria La Bastia</span>
+  <h1 data-i18n="menu.title">Il nostro <em>Menu</em></h1>
   <div class="ph-wave" aria-hidden="true">
     <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
       <path fill="#FBF5E8" d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z"/>
@@ -56,12 +66,12 @@
 
     <!-- TABS -->
     <div class="menu-tabs" role="tablist" aria-label="Categorie menu">
-      <button class="menu-tab active" role="tab" aria-selected="true"  data-panel="antipasti">Antipasti</button>
-      <button class="menu-tab"        role="tab" aria-selected="false" data-panel="pesce">Pesce</button>
-      <button class="menu-tab"        role="tab" aria-selected="false" data-panel="pizza">Pizza</button>
-      <button class="menu-tab"        role="tab" aria-selected="false" data-panel="carne">Carne &amp; Terra</button>
-      <button class="menu-tab"        role="tab" aria-selected="false" data-panel="dolci">Dolci</button>
-      <button class="menu-tab menu-tab--lavoro" role="tab" aria-selected="false" data-panel="lavoro">🍽️ Menu Lavoro</button>
+      <button class="menu-tab active" role="tab" aria-selected="true"  data-panel="antipasti" data-i18n="menu.tabAntipasti">Antipasti</button>
+      <button class="menu-tab"        role="tab" aria-selected="false" data-panel="pesce"     data-i18n="menu.tabPesce">Pesce</button>
+      <button class="menu-tab"        role="tab" aria-selected="false" data-panel="pizza"     data-i18n="menu.tabPizza">Pizza</button>
+      <button class="menu-tab"        role="tab" aria-selected="false" data-panel="carne"     data-i18n="menu.tabCarne">Carne &amp; Terra</button>
+      <button class="menu-tab"        role="tab" aria-selected="false" data-panel="dolci"     data-i18n="menu.tabDolci">Dolci</button>
+      <button class="menu-tab menu-tab--lavoro" role="tab" aria-selected="false" data-panel="lavoro" data-i18n="menu.tabLavoro">🍽️ Menu Lavoro</button>
     </div>
 
     <!-- ── ANTIPASTI ─────────────────────────────────────────── -->
@@ -69,35 +79,17 @@
       <div class="category-banner">
         <span class="cat-icon">🥗</span>
         <div>
-          <h2>Antipasti</h2>
-          <p>Per iniziare con il piede giusto — sapori di mare e di campagna.</p>
+          <h2 data-i18n="menu.banAntipastiH">Antipasti</h2>
+          <p data-i18n="menu.banAntipastiP">Per iniziare con il piede giusto — sapori di mare e di campagna.</p>
         </div>
       </div>
       <div class="menu-cards">
-        <div class="menu-card">
-          <div><div class="mc-name">Insalata di mare</div><div class="mc-desc">Polpo, gamberi, vongole e seppioline marinati con limone, olio e prezzemolo.</div></div>
-          <div class="mc-price">€ 14</div>
-        </div>
-        <div class="menu-card">
-          <div><div class="mc-name">Frittura di calamari</div><div class="mc-desc">Anelli di calamaro fresco in pastella leggera, fritti all'istante.</div></div>
-          <div class="mc-price">€ 13</div>
-        </div>
-        <div class="menu-card">
-          <div><div class="mc-name">Cozze alla marinara</div><div class="mc-desc">Cozze fresche in brodetto di pomodoro, aglio e prezzemolo con pane casereccio.</div></div>
-          <div class="mc-price">€ 12</div>
-        </div>
-        <div class="menu-card">
-          <div><div class="mc-name">Carpaccio di branzino</div><div class="mc-desc">Fettine di branzino fresco con rucola, agrumi e olio EVO.</div></div>
-          <div class="mc-price">€ 15</div>
-        </div>
-        <div class="menu-card">
-          <div><div class="mc-name">Tartare di tonno</div><div class="mc-desc">Tonno rosso battuto al coltello con avocado e sesamo tostato.</div></div>
-          <div class="mc-price">€ 16</div>
-        </div>
-        <div class="menu-card">
-          <div><div class="mc-name">Affettati misti</div><div class="mc-desc">Selezione di salumi locali con giardiniera e pane casereccio.</div></div>
-          <div class="mc-price">€ 11</div>
-        </div>
+        <div class="menu-card"><div><div class="mc-name">Nome del piatto</div><div class="mc-desc">Descrizione breve degli ingredienti e della preparazione.</div></div><div class="mc-price">€ —</div></div>
+        <div class="menu-card"><div><div class="mc-name">Nome del piatto</div><div class="mc-desc">Descrizione breve degli ingredienti e della preparazione.</div></div><div class="mc-price">€ —</div></div>
+        <div class="menu-card"><div><div class="mc-name">Nome del piatto</div><div class="mc-desc">Descrizione breve degli ingredienti e della preparazione.</div></div><div class="mc-price">€ —</div></div>
+        <div class="menu-card"><div><div class="mc-name">Nome del piatto</div><div class="mc-desc">Descrizione breve degli ingredienti e della preparazione.</div></div><div class="mc-price">€ —</div></div>
+        <div class="menu-card"><div><div class="mc-name">Nome del piatto</div><div class="mc-desc">Descrizione breve degli ingredienti e della preparazione.</div></div><div class="mc-price">€ —</div></div>
+        <div class="menu-card"><div><div class="mc-name">Nome del piatto</div><div class="mc-desc">Descrizione breve degli ingredienti e della preparazione.</div></div><div class="mc-price">€ —</div></div>
       </div>
     </div>
 
@@ -106,51 +98,17 @@
       <div class="category-banner">
         <span class="cat-icon">🐟</span>
         <div>
-          <h2>Pesce &amp; Frutti di Mare</h2>
-          <p>Selezione fresca ogni mattina. I piatti che ci hanno reso famosi nel Veronese.</p>
+          <h2 data-i18n="menu.banPesceH">Pesce &amp; Frutti di Mare</h2>
+          <p data-i18n="menu.banPesceP">Selezione fresca ogni mattina. I piatti che ci hanno reso famosi nel Veronese.</p>
         </div>
       </div>
       <div class="menu-cards">
-        <div class="menu-card featured">
-          <div><div class="mc-name">Spaghetti allo scoglio</div><div class="mc-desc">Il nostro piatto simbolo. Vongole veraci, cozze, gamberi e scampi in sugo di pomodorino e vino bianco.</div></div>
-          <div class="mc-price">€ 18</div>
-        </div>
-        <div class="menu-card">
-          <div><div class="mc-name">Risotto ai frutti di mare</div><div class="mc-desc">Riso Carnaroli mantecato con vongole, gamberi e crema di bisque.</div></div>
-          <div class="mc-price">€ 17</div>
-        </div>
-        <div class="menu-card">
-          <div><div class="mc-name">Linguine alle vongole</div><div class="mc-desc">In bianco, con vongole veraci, aglio, olio e peperoncino.</div></div>
-          <div class="mc-price">€ 16</div>
-        </div>
-        <div class="menu-card">
-          <div><div class="mc-name">Spaghetti al nero di seppia</div><div class="mc-desc">Con seppie in umido, pomodoro e un tocco di peperoncino.</div></div>
-          <div class="mc-price">€ 15</div>
-        </div>
-        <div class="menu-card">
-          <div><div class="mc-name">Fritto misto di pesce</div><div class="mc-desc">Porzione generosa: calamari, gamberi, acciughe e verdure in pastella croccante.</div></div>
-          <div class="mc-price">€ 20</div>
-        </div>
-        <div class="menu-card">
-          <div><div class="mc-name">Branzino alla griglia</div><div class="mc-desc">Intero, condito con olio EVO, limone e erbe aromatiche.</div></div>
-          <div class="mc-price">€ 24</div>
-        </div>
-        <div class="menu-card">
-          <div><div class="mc-name">Rombo al forno</div><div class="mc-desc">Con patate, pomodorini, capperi e origano. Cotto lentamente.</div></div>
-          <div class="mc-price">€ 26</div>
-        </div>
-        <div class="menu-card">
-          <div><div class="mc-name">Polpo alla brace</div><div class="mc-desc">Polpo cotto a bassa temperatura e finito alla brace con limone e prezzemolo.</div></div>
-          <div class="mc-price">€ 22</div>
-        </div>
-        <div class="menu-card">
-          <div><div class="mc-name">Grigliata mista di pesce</div><div class="mc-desc">Selezione del giorno: branzino, orata, gamberi, seppioline e calamari.</div></div>
-          <div class="mc-price">€ 28</div>
-        </div>
-        <div class="menu-card">
-          <div><div class="mc-name">Baccalà mantecato</div><div class="mc-desc">Tradizione veneta: baccalà a crema su polenta bianca morbida.</div></div>
-          <div class="mc-price">€ 18</div>
-        </div>
+        <div class="menu-card featured"><div><div class="mc-name">Spaghetti allo scoglio ★</div><div class="mc-desc">Il nostro piatto simbolo — in aggiornamento.</div></div><div class="mc-price">€ —</div></div>
+        <div class="menu-card"><div><div class="mc-name">Nome del piatto</div><div class="mc-desc">Descrizione breve degli ingredienti e della preparazione.</div></div><div class="mc-price">€ —</div></div>
+        <div class="menu-card"><div><div class="mc-name">Nome del piatto</div><div class="mc-desc">Descrizione breve degli ingredienti e della preparazione.</div></div><div class="mc-price">€ —</div></div>
+        <div class="menu-card"><div><div class="mc-name">Nome del piatto</div><div class="mc-desc">Descrizione breve degli ingredienti e della preparazione.</div></div><div class="mc-price">€ —</div></div>
+        <div class="menu-card"><div><div class="mc-name">Nome del piatto</div><div class="mc-desc">Descrizione breve degli ingredienti e della preparazione.</div></div><div class="mc-price">€ —</div></div>
+        <div class="menu-card"><div><div class="mc-name">Nome del piatto</div><div class="mc-desc">Descrizione breve degli ingredienti e della preparazione.</div></div><div class="mc-price">€ —</div></div>
       </div>
     </div>
 
@@ -159,43 +117,19 @@
       <div class="category-banner">
         <span class="cat-icon">🍕</span>
         <div>
-          <h2>Pizza Artigianale</h2>
-          <p>Impasto a lunga lievitazione, ingredienti freschi e forno ad alta temperatura.</p>
+          <h2 data-i18n="menu.banPizzaH">Pizza Artigianale</h2>
+          <p data-i18n="menu.banPizzaP">Impasto a lunga lievitazione, ingredienti freschi e forno ad alta temperatura.</p>
         </div>
       </div>
       <div class="menu-cards">
-        <div class="menu-card">
-          <div><div class="mc-name">Margherita</div><div class="mc-desc">Pomodoro San Marzano, fior di latte, basilico fresco e olio EVO.</div></div>
-          <div class="mc-price">€ 8</div>
-        </div>
-        <div class="menu-card">
-          <div><div class="mc-name">Marinara</div><div class="mc-desc">Pomodoro, aglio, origano e olio EVO. La classica senza formaggio.</div></div>
-          <div class="mc-price">€ 7</div>
-        </div>
-        <div class="menu-card">
-          <div><div class="mc-name">Diavola</div><div class="mc-desc">Pomodoro, fior di latte, salame piccante e peperoncino fresco.</div></div>
-          <div class="mc-price">€ 10</div>
-        </div>
-        <div class="menu-card">
-          <div><div class="mc-name">4 Stagioni</div><div class="mc-desc">Pomodoro, fior di latte, prosciutto cotto, funghi, carciofi e olive.</div></div>
-          <div class="mc-price">€ 11</div>
-        </div>
-        <div class="menu-card">
-          <div><div class="mc-name">Calzone fritto</div><div class="mc-desc">Ripieno di ricotta, salame napoletano e ciccioli. Fritto in olio di semi.</div></div>
-          <div class="mc-price">€ 11</div>
-        </div>
-        <div class="menu-card featured">
-          <div><div class="mc-name">Pizza ai Frutti di Mare</div><div class="mc-desc">Base rossa, fior di latte, vongole, cozze, gamberi, aglio e prezzemolo.</div></div>
-          <div class="mc-price">€ 14</div>
-        </div>
-        <div class="menu-card">
-          <div><div class="mc-name">Pizza al Salmone</div><div class="mc-desc">Base bianca, fior di latte, salmone affumicato, rucola e grana.</div></div>
-          <div class="mc-price">€ 13</div>
-        </div>
-        <div class="menu-card">
-          <div><div class="mc-name">Capricciosa</div><div class="mc-desc">Pomodoro, fior di latte, prosciutto, funghi, carciofi, olive e uovo.</div></div>
-          <div class="mc-price">€ 12</div>
-        </div>
+        <div class="menu-card"><div><div class="mc-name">Nome della pizza</div><div class="mc-desc">Descrizione degli ingredienti e del condimento.</div></div><div class="mc-price">€ —</div></div>
+        <div class="menu-card"><div><div class="mc-name">Nome della pizza</div><div class="mc-desc">Descrizione degli ingredienti e del condimento.</div></div><div class="mc-price">€ —</div></div>
+        <div class="menu-card"><div><div class="mc-name">Nome della pizza</div><div class="mc-desc">Descrizione degli ingredienti e del condimento.</div></div><div class="mc-price">€ —</div></div>
+        <div class="menu-card"><div><div class="mc-name">Nome della pizza</div><div class="mc-desc">Descrizione degli ingredienti e del condimento.</div></div><div class="mc-price">€ —</div></div>
+        <div class="menu-card"><div><div class="mc-name">Nome della pizza</div><div class="mc-desc">Descrizione degli ingredienti e del condimento.</div></div><div class="mc-price">€ —</div></div>
+        <div class="menu-card"><div><div class="mc-name">Nome della pizza</div><div class="mc-desc">Descrizione degli ingredienti e del condimento.</div></div><div class="mc-price">€ —</div></div>
+        <div class="menu-card"><div><div class="mc-name">Nome della pizza</div><div class="mc-desc">Descrizione degli ingredienti e del condimento.</div></div><div class="mc-price">€ —</div></div>
+        <div class="menu-card"><div><div class="mc-name">Nome della pizza</div><div class="mc-desc">Descrizione degli ingredienti e del condimento.</div></div><div class="mc-price">€ —</div></div>
       </div>
     </div>
 
@@ -204,35 +138,17 @@
       <div class="category-banner">
         <span class="cat-icon">🥩</span>
         <div>
-          <h2>Carne &amp; Terra</h2>
-          <p>Grigliate, paste tradizionali e piatti della tradizione veneta.</p>
+          <h2 data-i18n="menu.banCarneH">Carne &amp; Terra</h2>
+          <p data-i18n="menu.banCarneP">Grigliate, paste tradizionali e piatti della tradizione veneta.</p>
         </div>
       </div>
       <div class="menu-cards">
-        <div class="menu-card">
-          <div><div class="mc-name">Tagliata di manzo</div><div class="mc-desc">Con rucola, grana a scaglie e pomodorini. Al sangue o ben cotta.</div></div>
-          <div class="mc-price">€ 22</div>
-        </div>
-        <div class="menu-card">
-          <div><div class="mc-name">Grigliata mista di carne</div><div class="mc-desc">Salsiccia, costine, pollo e braciola di maiale alla brace con contorno.</div></div>
-          <div class="mc-price">€ 20</div>
-        </div>
-        <div class="menu-card">
-          <div><div class="mc-name">Cotoletta alla milanese</div><div class="mc-desc">Classica panata e fritta in burro chiarificato, con insalata mista.</div></div>
-          <div class="mc-price">€ 16</div>
-        </div>
-        <div class="menu-card">
-          <div><div class="mc-name">Pasta al ragù della casa</div><div class="mc-desc">Tagliatelle fresche con ragù lento di manzo e maiale. Un classico.</div></div>
-          <div class="mc-price">€ 13</div>
-        </div>
-        <div class="menu-card">
-          <div><div class="mc-name">Gnocchetti burro e salvia</div><div class="mc-desc">Gnocchi di patate fatti in casa, burro fuso, salvia e grana padano.</div></div>
-          <div class="mc-price">€ 12</div>
-        </div>
-        <div class="menu-card">
-          <div><div class="mc-name">Insalata mista / caprese</div><div class="mc-desc">Verdure di stagione, pomodori e mozzarella fresca con olio EVO.</div></div>
-          <div class="mc-price">€ 8</div>
-        </div>
+        <div class="menu-card"><div><div class="mc-name">Nome del piatto</div><div class="mc-desc">Descrizione breve degli ingredienti e della preparazione.</div></div><div class="mc-price">€ —</div></div>
+        <div class="menu-card"><div><div class="mc-name">Nome del piatto</div><div class="mc-desc">Descrizione breve degli ingredienti e della preparazione.</div></div><div class="mc-price">€ —</div></div>
+        <div class="menu-card"><div><div class="mc-name">Nome del piatto</div><div class="mc-desc">Descrizione breve degli ingredienti e della preparazione.</div></div><div class="mc-price">€ —</div></div>
+        <div class="menu-card"><div><div class="mc-name">Nome del piatto</div><div class="mc-desc">Descrizione breve degli ingredienti e della preparazione.</div></div><div class="mc-price">€ —</div></div>
+        <div class="menu-card"><div><div class="mc-name">Nome del piatto</div><div class="mc-desc">Descrizione breve degli ingredienti e della preparazione.</div></div><div class="mc-price">€ —</div></div>
+        <div class="menu-card"><div><div class="mc-name">Nome del piatto</div><div class="mc-desc">Descrizione breve degli ingredienti e della preparazione.</div></div><div class="mc-price">€ —</div></div>
       </div>
     </div>
 
@@ -241,31 +157,16 @@
       <div class="category-banner">
         <span class="cat-icon">🍮</span>
         <div>
-          <h2>Dolci</h2>
-          <p>Il finale perfetto per una cena de La Bastia.</p>
+          <h2 data-i18n="menu.banDolciH">Dolci</h2>
+          <p data-i18n="menu.banDolciP">Il finale perfetto per una cena de La Bastia.</p>
         </div>
       </div>
       <div class="menu-cards">
-        <div class="menu-card">
-          <div><div class="mc-name">Tiramisù della casa</div><div class="mc-desc">Ricetta tradizionale in bicchiere con cacao amaro Van Houten.</div></div>
-          <div class="mc-price">€ 7</div>
-        </div>
-        <div class="menu-card">
-          <div><div class="mc-name">Panna cotta al limone</div><div class="mc-desc">Leggera e fresca, con coulis di frutti di bosco e menta.</div></div>
-          <div class="mc-price">€ 7</div>
-        </div>
-        <div class="menu-card">
-          <div><div class="mc-name">Semifreddo al pistacchio</div><div class="mc-desc">Con granella di pistacchio di Bronte e miele millefiori.</div></div>
-          <div class="mc-price">€ 8</div>
-        </div>
-        <div class="menu-card">
-          <div><div class="mc-name">Gelato artigianale</div><div class="mc-desc">Due o tre gusti a scelta, con panna montata o coulis di frutti.</div></div>
-          <div class="mc-price">€ 6</div>
-        </div>
-        <div class="menu-card">
-          <div><div class="mc-name">Selezione di formaggi</div><div class="mc-desc">Assortimento di formaggi locali con mostarda di Cremona e miele.</div></div>
-          <div class="mc-price">€ 10</div>
-        </div>
+        <div class="menu-card"><div><div class="mc-name">Nome del dolce</div><div class="mc-desc">Descrizione breve del dolce e degli ingredienti principali.</div></div><div class="mc-price">€ —</div></div>
+        <div class="menu-card"><div><div class="mc-name">Nome del dolce</div><div class="mc-desc">Descrizione breve del dolce e degli ingredienti principali.</div></div><div class="mc-price">€ —</div></div>
+        <div class="menu-card"><div><div class="mc-name">Nome del dolce</div><div class="mc-desc">Descrizione breve del dolce e degli ingredienti principali.</div></div><div class="mc-price">€ —</div></div>
+        <div class="menu-card"><div><div class="mc-name">Nome del dolce</div><div class="mc-desc">Descrizione breve del dolce e degli ingredienti principali.</div></div><div class="mc-price">€ —</div></div>
+        <div class="menu-card"><div><div class="mc-name">Nome del dolce</div><div class="mc-desc">Descrizione breve del dolce e degli ingredienti principali.</div></div><div class="mc-price">€ —</div></div>
       </div>
     </div>
 
@@ -274,49 +175,49 @@
       <div class="category-banner">
         <span class="cat-icon">💼</span>
         <div>
-          <h2>Menu Lavoro</h2>
-          <p>Disponibile a pranzo dal <strong>martedì al venerdì</strong> — veloce, buono e completo.</p>
+          <h2 data-i18n="menu.banLavoroH">Menu Lavoro</h2>
+          <p data-i18n="menu.banLavoroP">Disponibile a pranzo dal <strong>martedì al venerdì</strong> — veloce, buono e completo.</p>
         </div>
       </div>
 
-      <div class="lavoro-note">
+      <div class="lavoro-note" data-i18n="menu.lavoroNote">
         Primo · Secondo · Contorno · Pane &amp; acqua inclusi
       </div>
 
       <div class="lavoro-grid">
 
         <div class="lavoro-section">
-          <h3 class="lavoro-section-title">🍝 Primo</h3>
+          <h3 class="lavoro-section-title" data-i18n="menu.secPrimo">🍝 Primo</h3>
           <div class="menu-cards">
-            <div class="menu-card"><div><div class="mc-name">Pasta al ragù della casa</div><div class="mc-desc">Tagliatelle fresche con ragù lento di manzo e maiale.</div></div></div>
-            <div class="menu-card"><div><div class="mc-name">Pasta al pomodoro fresco</div><div class="mc-desc">Con basilico, olio EVO e parmigiano reggiano.</div></div></div>
-            <div class="menu-card"><div><div class="mc-name">Risotto del giorno</div><div class="mc-desc">Varia in base alla disponibilità — chiedere al personale.</div></div></div>
+            <div class="menu-card"><div><div class="mc-name" data-i18n="menu.dish_ragu">Pasta al ragù della casa</div><div class="mc-desc" data-i18n="menu.desc_ragu">Tagliatelle fresche con ragù lento di manzo e maiale.</div></div></div>
+            <div class="menu-card"><div><div class="mc-name" data-i18n="menu.dish_pom">Pasta al pomodoro fresco</div><div class="mc-desc" data-i18n="menu.desc_pom">Con basilico, olio EVO e parmigiano reggiano.</div></div></div>
+            <div class="menu-card"><div><div class="mc-name" data-i18n="menu.dish_ris">Risotto del giorno</div><div class="mc-desc" data-i18n="menu.desc_ris">Varia in base alla disponibilità — chiedere al personale.</div></div></div>
           </div>
         </div>
 
         <div class="lavoro-section">
-          <h3 class="lavoro-section-title">🥩 Secondo</h3>
+          <h3 class="lavoro-section-title" data-i18n="menu.secSecondo">🥩 Secondo</h3>
           <div class="menu-cards">
-            <div class="menu-card"><div><div class="mc-name">Secondo di carne del giorno</div><div class="mc-desc">Scelto dal cuoco in base alla disponibilità — chiedere al personale.</div></div></div>
-            <div class="menu-card"><div><div class="mc-name">Secondo di pesce del giorno</div><div class="mc-desc">Scelto dal cuoco in base alla disponibilità — chiedere al personale.</div></div></div>
+            <div class="menu-card"><div><div class="mc-name" data-i18n="menu.dish_carne">Secondo di carne del giorno</div><div class="mc-desc" data-i18n="menu.desc_carne">Scelto dal cuoco in base alla disponibilità — chiedere al personale.</div></div></div>
+            <div class="menu-card"><div><div class="mc-name" data-i18n="menu.dish_pesce">Secondo di pesce del giorno</div><div class="mc-desc" data-i18n="menu.desc_pesce">Scelto dal cuoco in base alla disponibilità — chiedere al personale.</div></div></div>
           </div>
         </div>
 
         <div class="lavoro-section">
-          <h3 class="lavoro-section-title">🥗 Contorno</h3>
+          <h3 class="lavoro-section-title" data-i18n="menu.secContorno">🥗 Contorno</h3>
           <div class="menu-cards">
-            <div class="menu-card"><div><div class="mc-name">Insalata mista</div><div class="mc-desc">Verdure di stagione con olio EVO e aceto.</div></div></div>
-            <div class="menu-card"><div><div class="mc-name">Verdure grigliate</div><div class="mc-desc">Zucchine, melanzane e peperoni alla griglia.</div></div></div>
-            <div class="menu-card"><div><div class="mc-name">Patate al forno</div><div class="mc-desc">Croccanti, con rosmarino e aglio.</div></div></div>
+            <div class="menu-card"><div><div class="mc-name" data-i18n="menu.dish_ins">Insalata mista</div><div class="mc-desc" data-i18n="menu.desc_ins">Verdure di stagione con olio EVO e aceto.</div></div></div>
+            <div class="menu-card"><div><div class="mc-name" data-i18n="menu.dish_verd">Verdure grigliate</div><div class="mc-desc" data-i18n="menu.desc_verd">Zucchine, melanzane e peperoni alla griglia.</div></div></div>
+            <div class="menu-card"><div><div class="mc-name" data-i18n="menu.dish_pat">Patate al forno</div><div class="mc-desc" data-i18n="menu.desc_pat">Croccanti, con rosmarino e aglio.</div></div></div>
           </div>
         </div>
 
       </div>
 
-      <p class="lavoro-cta">Per prenotare il tuo tavolo chiama <a href="tel:+390456304370">045 630 4370</a></p>
+      <p class="lavoro-cta" data-i18n="menu.lavoroCta">Per prenotare il tuo tavolo chiama <a href="tel:+390456304370">045 630 4370</a></p>
     </div>
 
-    <p class="menu-note">
+    <p class="menu-note" data-i18n="menu.note">
       Prezzi indicativi · Menu soggetto a variazioni stagionali ·
       Comunicare eventuali allergie o intolleranze al personale prima di ordinare
     </p>
@@ -328,12 +229,12 @@
 <footer id="footer" role="contentinfo">
   <div class="container footer-inner">
     <div class="footer-logo">La <em>Bastia</em></div>
-    <p class="footer-tag">Ristorante · Pizzeria · Bar &nbsp;·&nbsp; Nogarole Rocca, Verona</p>
+    <p class="footer-tag" data-i18n="footer.tag">Ristorante · Pizzeria · Bar &nbsp;·&nbsp; Nogarole Rocca, Verona</p>
     <nav class="footer-nav" aria-label="Link footer">
-      <a href="index.html">Home</a>
-      <a href="index.html#chi-siamo">Chi siamo</a>
-      <a href="menu.html">Menu</a>
-      <a href="contatti.html">Contatti</a>
+      <a href="index.html"           data-i18n="nav.home">Home</a>
+      <a href="index.html#chi-siamo" data-i18n="nav.about">Chi siamo</a>
+      <a href="menu.html"            data-i18n="nav.menu">Menu</a>
+      <a href="contatti.html"        data-i18n="nav.contatti">Contatti</a>
     </nav>
     <div class="footer-divider"></div>
     <div class="footer-contacts">
@@ -342,12 +243,13 @@
       <a href="https://www.facebook.com/p/La-Bastia-pizzeria-ristorante-61551666945159/" target="_blank" rel="noopener">📘 Facebook</a>
       <a href="https://www.instagram.com/labastiaristorantepizzeria/" target="_blank" rel="noopener">📸 Instagram</a>
     </div>
-    <p class="footer-copy">© 2024 Ristorante Pizzeria La Bastia · P.IVA 000000000</p>
+    <p class="footer-copy" data-i18n="footer.copy">© 2024 Ristorante Pizzeria La Bastia · P.IVA 000000000</p>
   </div>
 </footer>
 
 <button id="scroll-top" aria-label="Torna in cima">↑</button>
 
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 <script src="js/menu.js"></script>
 </body>

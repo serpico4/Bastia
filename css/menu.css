@@ -1,0 +1,178 @@
+/* ═══════════════════════════════════════════════════════════════
+   menu.css — Stili pagina Menu (menu.html)
+═══════════════════════════════════════════════════════════════ */
+
+/* ─── SEZIONE MENU ──────────────────────────────────────────── */
+#menu-page {
+  padding: 70px 0 100px;
+  background: var(--cream);
+}
+
+/* ─── TABS ──────────────────────────────────────────────────── */
+.menu-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 3rem;
+  border-bottom: 2px solid var(--cream-dk);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.menu-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-tab {
+  padding: 12px 26px;
+  white-space: nowrap;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-lt);
+  cursor: pointer;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  transition: var(--t);
+  background: none;
+  font-family: var(--ff-body);
+}
+
+.menu-tab:hover,
+.menu-tab.active {
+  color: var(--rust-dk);
+  border-bottom-color: var(--amber);
+}
+
+/* ─── PANEL ─────────────────────────────────────────────────── */
+.menu-panel {
+  display: none;
+  animation: panelIn 0.3s ease;
+}
+
+.menu-panel.active {
+  display: block;
+}
+
+@keyframes panelIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── GRIGLIA CARTE ─────────────────────────────────────────── */
+.menu-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 20px;
+}
+
+/* ─── CARTA SINGOLA ─────────────────────────────────────────── */
+.menu-card {
+  background: var(--warm-white);
+  border-radius: var(--radius);
+  padding: 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+  box-shadow: 0 2px 14px rgba(92, 34, 16, 0.07);
+  border-left: 3px solid transparent;
+  transition: box-shadow var(--t), transform var(--t), border-color var(--t);
+}
+
+.menu-card:hover {
+  box-shadow: 0 8px 28px rgba(92, 34, 16, 0.13);
+  transform: translateY(-2px);
+  border-left-color: var(--amber);
+}
+
+/* carta in evidenza (specialità della casa) */
+.menu-card.featured {
+  border-left-color: var(--rust);
+  background: linear-gradient(135deg, var(--warm-white) 0%, #fff9f3 100%);
+}
+
+.menu-card.featured .mc-name::after {
+  content: ' ★';
+  color: var(--amber);
+  font-size: 0.85em;
+}
+
+.mc-name {
+  font-family: var(--ff-head);
+  font-size: 1.05rem;
+  color: var(--rust-dk);
+  margin-bottom: 5px;
+}
+
+.mc-desc {
+  font-size: 0.84rem;
+  color: var(--text-lt);
+  line-height: 1.6;
+}
+
+.mc-price {
+  font-family: var(--ff-head);
+  font-size: 1.1rem;
+  color: var(--amber);
+  white-space: nowrap;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* ─── NOTE A PIÈ MENU ───────────────────────────────────────── */
+.menu-note {
+  text-align: center;
+  margin-top: 2.8rem;
+  color: var(--text-lt);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+/* ─── BANNER CATEGORIA (descrizione sotto tabs) ─────────────── */
+.category-banner {
+  background: var(--rust-dk);
+  border-radius: var(--radius);
+  padding: 24px 30px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.category-banner .cat-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.category-banner h2 {
+  font-family: var(--ff-head);
+  font-size: 1.3rem;
+  color: var(--cream);
+  margin-bottom: 4px;
+}
+
+.category-banner p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .category-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu-card {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mc-price {
+    align-self: flex-end;
+  }
+}

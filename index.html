@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Bastia – Ristorante Pizzeria | Nogarole Rocca</title>
+  <meta name="description" content="La Bastia, ristorante pizzeria a Nogarole Rocca (VR). Pizza, pesce, carne e pasta. Specialità: spaghetti allo scoglio. Tel: 0456304370" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+
+<!-- ══ MOBILE MENU ══════════════════════════════════════════════ -->
+<nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile">
+  <a href="index.html" class="active">Home</a>
+  <a href="index.html#chi-siamo">Chi siamo</a>
+  <a href="index.html#specialita">Specialità</a>
+  <a href="menu.html">Menu</a>
+  <a href="contatti.html">Contatti</a>
+</nav>
+
+<!-- ══ NAVBAR ═══════════════════════════════════════════════════ -->
+<header id="navbar" role="banner">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">La <em>Bastia</em></a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="index.html#chi-siamo">Chi siamo</a></li>
+      <li><a href="index.html#specialita">Specialità</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="contatti.html" class="btn btn-amber">Contatti</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Apri menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ══ HERO ══════════════════════════════════════════════════════ -->
+<section id="hero" aria-label="Benvenuto">
+  <div class="hero-bg"></div>
+
+  <!-- Piatto circolare (desktop) -->
+  <div class="hero-dish" aria-hidden="true">
+    <img
+      src="img/spaghettirotanti.jpg"
+      alt="Spaghetti allo scoglio visti dall'alto"
+    />
+  </div>
+
+  <div class="hero-content">
+    <span class="hero-eyebrow">Ristorante · Pizzeria · Bar &nbsp;·&nbsp; Nogarole Rocca, Verona</span>
+    <h1 class="hero-title">La Bastia</h1>
+    <p class="hero-script">Sapori autentici dal mare e dalla terra</p>
+    <p class="hero-tagline">Pizza, pesce, carne e pasta — tutto con passione artigianale</p>
+    <div class="hero-ctas">
+      <a href="menu.html"      class="btn btn-amber">Scopri il menu</a>
+      <a href="contatti.html"  class="btn btn-outline">Dove siamo</a>
+    </div>
+  </div>
+
+  <div class="hero-wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path fill="#FFFDF8" d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ══ STRIP INFO ════════════════════════════════════════════════ -->
+<div id="strip" aria-hidden="true">
+  <div class="strip-inner">
+    <div class="strip-item"><span class="ico">🐟</span> Pesce fresco</div>
+    <div class="strip-item"><span class="ico">🍕</span> Pizza artigianale</div>
+    <div class="strip-item"><span class="ico">🥩</span> Carne alla griglia</div>
+    <div class="strip-item"><span class="ico">📍</span> Via Roma 36, Nogarole Rocca</div>
+    <div class="strip-item"><span class="ico">📞</span> <a href="tel:+390456304370" style="color:inherit">045 630 4370</a></div>
+  </div>
+</div>
+
+<!-- ══ CHI SIAMO ═════════════════════════════════════════════════ -->
+<section id="chi-siamo" aria-label="Chi siamo">
+  <div class="container">
+    <div class="chi-grid">
+
+      <div class="chi-img-wrap">
+        <img
+          src="img/sala.jpg"
+          alt="Sala interna del ristorante La Bastia"
+          loading="lazy"
+        />
+        <div class="chi-badge">
+          <div class="num">30+</div>
+          <div class="lbl">anni di passione</div>
+        </div>
+      </div>
+
+      <div class="chi-text">
+        <h2 class="section-title">Un luogo di<br/>gusto autentico</h2>
+        <span class="amber-line"></span>
+        <p>La Bastia è una realtà consolidata nel cuore di Nogarole Rocca, nel veronese. Da oltre trent'anni accogliamo famiglie, lavoratori e buongustai con una proposta variegata: pesce fresco, pizze artigianali, carni alla griglia e pasta fatta con cura.</p>
+        <p>Il pesce è il nostro punto di forza: selezioniamo ogni mattina il meglio del mercato ittico. Ma non ci fermiamo lì: la nostra cucina è un viaggio completo tra i sapori italiani più amati.</p>
+        <p>Un ambiente luminoso e familiare, perfetto per ogni occasione — dal pranzo di lavoro alla cena speciale in famiglia.</p>
+        <a href="menu.html" class="btn btn-rust">Sfoglia il menu</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ SPECIALITÀ ════════════════════════════════════════════════ -->
+<section id="specialita" aria-label="La specialità della casa">
+  <div class="container">
+    <div class="spec-grid">
+
+      <div class="spec-img">
+        <div class="plate">
+          <img
+            src="img/spaghetti-scoglio.jpg"
+            alt="Spaghetti allo scoglio visti dall'alto, piatto della casa"
+            loading="lazy"
+          />
+        </div>
+        <div class="ring" aria-hidden="true"></div>
+      </div>
+
+      <div class="spec-text">
+        <h2 class="section-title on-dark">La nostra<br/><em style="color:var(--amber-lt)">specialità</em></h2>
+        <span class="amber-line"></span>
+        <p>Il piatto simbolo de La Bastia: gli <strong style="color:var(--amber-lt)">Spaghetti allo Scoglio</strong>. Abbondanti, profumati, generosi — proprio come la nostra cucina.</p>
+        <p>Spaghetti trafilati al bronzo, mantecati con vongole veraci, cozze, gamberi e scampi in un sughetto aromatico di pomodorino fresco, aglio e vino bianco.</p>
+        <div class="tags">
+          <span class="tag">Vongole veraci</span>
+          <span class="tag">Cozze</span>
+          <span class="tag">Gamberi</span>
+          <span class="tag">Scampi</span>
+          <span class="tag">Pomodorino</span>
+          <span class="tag">Vino bianco</span>
+        </div>
+        <a href="menu.html#pesce" class="btn btn-amber">Vedi tutto il menu pesce</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ PERCHÉ NOI ════════════════════════════════════════════════ -->
+<section id="perche" aria-label="Perché sceglierci">
+  <div class="container">
+    <h2 class="section-title">Perché scegliere La Bastia</h2>
+    <span class="amber-line"></span>
+    <div class="perche-grid">
+      <div class="perche-card">
+        <div class="perche-icon">🐟</div>
+        <h3>Pesce fresco ogni giorno</h3>
+        <p>Selezioniamo il pescato migliore ogni mattina. Mai congelato, sempre freschissimo.</p>
+      </div>
+      <div class="perche-card">
+        <div class="perche-icon">🍕</div>
+        <h3>Pizza artigianale</h3>
+        <p>Impasto a lunga lievitazione, forno ad alta temperatura e ingredienti selezionati.</p>
+      </div>
+      <div class="perche-card">
+        <div class="perche-icon">🍽️</div>
+        <h3>Porzioni generose</h3>
+        <p>Da noi si mangia davvero. Quantità abbondanti per soddisfare ogni appetito.</p>
+      </div>
+      <div class="perche-card">
+        <div class="perche-icon">👨‍👩‍👧</div>
+        <h3>Ambiente familiare</h3>
+        <p>Accogliente e luminoso, ideale per il pranzo di lavoro, la cena in famiglia o le occasioni speciali.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════════ -->
+<footer id="footer" role="contentinfo">
+  <div class="container footer-inner">
+    <div class="footer-logo">La <em>Bastia</em></div>
+    <p class="footer-tag">Ristorante · Pizzeria · Bar &nbsp;·&nbsp; Nogarole Rocca, Verona</p>
+    <nav class="footer-nav" aria-label="Link footer">
+      <a href="index.html">Home</a>
+      <a href="index.html#chi-siamo">Chi siamo</a>
+      <a href="menu.html">Menu</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+    <div class="footer-divider"></div>
+    <div class="footer-contacts">
+      <span>📍 Via Roma 36, 37060 Nogarole Rocca (VR)</span>
+      <a href="tel:+390456304370">📞 045 630 4370</a>
+      <a href="https://www.facebook.com/p/La-Bastia-pizzeria-ristorante-61551666945159/" target="_blank" rel="noopener">📘 Facebook</a>
+      <a href="https://www.instagram.com/labastiaristorantepizzeria/" target="_blank" rel="noopener">📸 Instagram</a>
+    </div>
+    <p class="footer-copy">© 2024 Ristorante Pizzeria La Bastia · P.IVA 000000000</p>
+  </div>
+</footer>
+
+<button id="scroll-top" aria-label="Torna in cima">↑</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>

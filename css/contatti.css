@@ -1,0 +1,261 @@
+/* ═══════════════════════════════════════════════════════════════
+   contatti.css — Stili pagina Contatti & Recensioni
+═══════════════════════════════════════════════════════════════ */
+
+/* ─── SEZIONE CONTATTI ──────────────────────────────────────── */
+#contatti {
+  padding: 80px 0;
+  background: var(--warm-white);
+}
+
+.contatti-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* ─── INFO ──────────────────────────────────────────────────── */
+.contatti-info h2 {
+  font-family: var(--ff-head);
+  font-size: clamp(1.6rem, 4vw, 2rem);
+  color: var(--rust-dk);
+  margin-bottom: 1.8rem;
+  line-height: 1.2;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 1.8rem;
+}
+
+.contact-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--cream-dk);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  color: var(--rust);
+}
+
+.contact-label {
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 4px;
+}
+
+.contact-value {
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.contact-value a {
+  color: var(--rust);
+  transition: color var(--t);
+}
+
+.contact-value a:hover {
+  color: var(--amber);
+}
+
+/* ─── TABELLA ORARI ─────────────────────────────────────────── */
+.orari-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 4px;
+}
+
+.orari-table td {
+  padding: 8px 0;
+  font-size: 0.9rem;
+  color: var(--text-lt);
+  border-bottom: 1px solid var(--cream-dk);
+}
+
+.orari-table td:first-child {
+  font-weight: 700;
+  color: var(--text);
+  width: 55%;
+}
+
+.orari-table tr:last-child td {
+  border-bottom: none;
+}
+
+.chiuso {
+  color: #C0392B !important;
+  font-style: italic;
+}
+
+/* ─── SOCIAL BUTTONS ────────────────────────────────────────── */
+.social-btns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.btn-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 20px;
+  border-radius: var(--radius);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  transition: var(--t);
+  border: 2px solid var(--cream-dk);
+  background: var(--cream);
+  color: var(--text);
+}
+
+.btn-social:hover {
+  border-color: var(--amber);
+  color: var(--rust-dk);
+}
+
+/* ─── MAPPA ─────────────────────────────────────────────────── */
+.contatti-map {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(92, 34, 16, 0.15);
+  height: 420px;
+  border: 3px solid var(--cream-dk);
+}
+
+.contatti-map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  #contatti {
+    padding: 60px 0;
+  }
+
+  .contatti-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contatti-map {
+    height: 280px;
+  }
+}
+
+/* ─── SEZIONE RECENSIONI ────────────────────────────────────── */
+#recensioni {
+  padding: 90px 0;
+  background: var(--rust-dk);
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 3rem;
+}
+
+.review-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(193, 120, 48, 0.2);
+  border-radius: var(--radius);
+  padding: 30px;
+  transition: background var(--t);
+}
+
+.review-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.stars {
+  color: var(--amber-lt);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.review-text {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.75;
+  font-size: 0.94rem;
+  margin-bottom: 18px;
+}
+
+.review-author {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--amber-lt);
+}
+
+.review-source {
+  font-size: 0.74rem;
+  color: rgba(255, 255, 255, 0.38);
+  margin-top: 2px;
+}
+
+/* ─── SEZIONE COME RAGGIUNGERCI ─────────────────────────────── */
+#raggiungerci {
+  padding: 80px 0;
+  background: var(--cream-dk);
+}
+
+.raggiungerci-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 3rem;
+}
+
+.info-card {
+  background: var(--warm-white);
+  border-radius: var(--radius);
+  padding: 30px 24px;
+  text-align: center;
+  box-shadow: 0 2px 14px rgba(92, 34, 16, 0.07);
+  border-top: 3px solid var(--amber);
+}
+
+.info-card .ic-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.info-card h3 {
+  font-family: var(--ff-head);
+  font-size: 1.05rem;
+  color: var(--rust-dk);
+  margin-bottom: 8px;
+}
+
+.info-card p {
+  font-size: 0.88rem;
+  color: var(--text-lt);
+  line-height: 1.65;
+}
+
+@media (max-width: 768px) {
+  #recensioni {
+    padding: 70px 0;
+  }
+
+  #raggiungerci {
+    padding: 60px 0;
+  }
+}

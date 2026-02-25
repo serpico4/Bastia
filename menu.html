@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu – La Bastia | Ristorante Pizzeria Nogarole Rocca</title>
+  <meta name="description" content="Il menu de La Bastia: antipasti, pesce fresco, pizza artigianale, carne alla griglia e dolci. Nogarole Rocca (VR)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/menu.css" />
+</head>
+<body>
+
+<!-- ══ MOBILE MENU ══════════════════════════════════════════════ -->
+<nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile">
+  <a href="index.html">Home</a>
+  <a href="index.html#chi-siamo">Chi siamo</a>
+  <a href="index.html#specialita">Specialità</a>
+  <a href="menu.html" class="active">Menu</a>
+  <a href="contatti.html">Contatti</a>
+</nav>
+
+<!-- ══ NAVBAR ═══════════════════════════════════════════════════ -->
+<header id="navbar" class="always-dark" role="banner">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">La <em>Bastia</em></a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#chi-siamo">Chi siamo</a></li>
+      <li><a href="index.html#specialita">Specialità</a></li>
+      <li><a href="menu.html" class="active">Menu</a></li>
+      <li><a href="contatti.html" class="btn btn-amber">Contatti</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Apri menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ══ PAGE HEADER ══════════════════════════════════════════════ -->
+<div class="page-header" role="banner">
+  <span class="ph-label">Ristorante Pizzeria La Bastia</span>
+  <h1>Il nostro <em>Menu</em></h1>
+  <div class="ph-wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path fill="#FBF5E8" d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z"/>
+    </svg>
+  </div>
+</div>
+
+<!-- ══ MENU ══════════════════════════════════════════════════════ -->
+<section id="menu-page">
+  <div class="container">
+
+    <!-- TABS -->
+    <div class="menu-tabs" role="tablist" aria-label="Categorie menu">
+      <button class="menu-tab active" role="tab" aria-selected="true"  data-panel="antipasti">Antipasti</button>
+      <button class="menu-tab"        role="tab" aria-selected="false" data-panel="pesce">Pesce</button>
+      <button class="menu-tab"        role="tab" aria-selected="false" data-panel="pizza">Pizza</button>
+      <button class="menu-tab"        role="tab" aria-selected="false" data-panel="carne">Carne &amp; Terra</button>
+      <button class="menu-tab"        role="tab" aria-selected="false" data-panel="dolci">Dolci</button>
+    </div>
+
+    <!-- ── ANTIPASTI ─────────────────────────────────────────── -->
+    <div class="menu-panel active" id="panel-antipasti" role="tabpanel">
+      <div class="category-banner">
+        <span class="cat-icon">🥗</span>
+        <div>
+          <h2>Antipasti</h2>
+          <p>Per iniziare con il piede giusto — sapori di mare e di campagna.</p>
+        </div>
+      </div>
+      <div class="menu-cards">
+        <div class="menu-card">
+          <div><div class="mc-name">Insalata di mare</div><div class="mc-desc">Polpo, gamberi, vongole e seppioline marinati con limone, olio e prezzemolo.</div></div>
+          <div class="mc-price">€ 14</div>
+        </div>
+        <div class="menu-card">
+          <div><div class="mc-name">Frittura di calamari</div><div class="mc-desc">Anelli di calamaro fresco in pastella leggera, fritti all'istante.</div></div>
+          <div class="mc-price">€ 13</div>
+        </div>
+        <div class="menu-card">
+          <div><div class="mc-name">Cozze alla marinara</div><div class="mc-desc">Cozze fresche in brodetto di pomodoro, aglio e prezzemolo con pane casereccio.</div></div>
+          <div class="mc-price">€ 12</div>
+        </div>
+        <div class="menu-card">
+          <div><div class="mc-name">Carpaccio di branzino</div><div class="mc-desc">Fettine di branzino fresco con rucola, agrumi e olio EVO.</div></div>
+          <div class="mc-price">€ 15</div>
+        </div>
+        <div class="menu-card">
+          <div><div class="mc-name">Tartare di tonno</div><div class="mc-desc">Tonno rosso battuto al coltello con avocado e sesamo tostato.</div></div>
+          <div class="mc-price">€ 16</div>
+        </div>
+        <div class="menu-card">
+          <div><div class="mc-name">Affettati misti</div><div class="mc-desc">Selezione di salumi locali con giardiniera e pane casereccio.</div></div>
+          <div class="mc-price">€ 11</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PESCE ──────────────────────────────────────────────── -->
+    <div class="menu-panel" id="panel-pesce" role="tabpanel">
+      <div class="category-banner">
+        <span class="cat-icon">🐟</span>
+        <div>
+          <h2>Pesce &amp; Frutti di Mare</h2>
+          <p>Selezione fresca ogni mattina. I piatti che ci hanno reso famosi nel Veronese.</p>
+        </div>
+      </div>
+      <div class="menu-cards">
+        <div class="menu-card featured">
+          <div><div class="mc-name">Spaghetti allo scoglio</div><div class="mc-desc">Il nostro piatto simbolo. Vongole veraci, cozze, gamberi e scampi in sugo di pomodorino e vino bianco.</div></div>
+          <div class="mc-price">€ 18</div>
+        </div>
+        <div class="menu-card">
+          <div><div class="mc-name">Risotto ai frutti di mare</div><div class="mc-desc">Riso Carnaroli mantecato con vongole, gamberi e crema di bisque.</div></div>
+          <div class="mc-price">€ 17</div>
+        </div>
+        <div class="menu-card">
+          <div><div class="mc-name">Linguine alle vongole</div><div class="mc-desc">In bianco, con vongole veraci, aglio, olio e peperoncino.</div></div>
+          <div class="mc-price">€ 16</div>
+        </div>
+        <div class="menu-card">
+          <div><div class="mc-name">Spaghetti al nero di seppia</div><div class="mc-desc">Con seppie in umido, pomodoro e un tocco di peperoncino.</div></div>
+          <div class="mc-price">€ 15</div>
+        </div>
+        <div class="menu-card">
+          <div><div class="mc-name">Fritto misto di pesce</div><div class="mc-desc">Porzione generosa: calamari, gamberi, acciughe e verdure in pastella croccante.</div></div>
+          <div class="mc-price">€ 20</div>
+        </div>
+        <div class="menu-card">
+          <div><div class="mc-name">Branzino alla griglia</div><div class="mc-desc">Intero, condito con olio EVO, limone e erbe aromatiche.</div></div>
+          <div class="mc-price">€ 24</div>
+        </div>
+        <div class="menu-card">
+          <div><div class="mc-name">Rombo al forno</div><div class="mc-desc">Con patate, pomodorini, capperi e origano. Cotto lentamente.</div></div>
+          <div class="mc-price">€ 26</div>
+        </div>
+        <div class="menu-card">
+          <div><div class="mc-name">Polpo alla brace</div><div class="mc-desc">Polpo cotto a bassa temperatura e finito alla brace con limone e prezzemolo.</div></div>
+          <div class="mc-price">€ 22</div>
+        </div>
+        <div class="menu-card">
+          <div><div class="mc-name">Grigliata mista di pesce</div><div class="mc-desc">Selezione del giorno: branzino, orata, gamberi, seppioline e calamari.</div></div>
+          <div class="mc-price">€ 28</div>
+        </div>
+        <div class="menu-card">
+          <div><div class="mc-name">Baccalà mantecato</div><div class="mc-desc">Tradizione veneta: baccalà a crema su polenta bianca morbida.</div></div>
+          <div class="mc-price">€ 18</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PIZZA ──────────────────────────────────────────────── -->
+    <div class="menu-panel" id="panel-pizza" role="tabpanel">
+      <div class="category-banner">
+        <span class="cat-icon">🍕</span>
+        <div>
+          <h2>Pizza Artigianale</h2>
+          <p>Impasto a lunga lievitazione, ingredienti freschi e forno ad alta temperatura.</p>
+        </div>
+      </div>
+      <div class="menu-cards">
+        <div class="menu-card">
+          <div><div class="mc-name">Margherita</div><div class="mc-desc">Pomodoro San Marzano, fior di latte, basilico fresco e olio EVO.</div></div>
+          <div class="mc-price">€ 8</div>
+        </div>
+        <div class="menu-card">
+          <div><div class="mc-name">Marinara</div><div class="mc-desc">Pomodoro, aglio, origano e olio EVO. La classica senza formaggio.</div></div>
+          <div class="mc-price">€ 7</div>
+        </div>
+        <div class="menu-card">
+          <div><div class="mc-name">Diavola</div><div class="mc-desc">Pomodoro, fior di latte, salame piccante e peperoncino fresco.</div></div>
+          <div class="mc-price">€ 10</div>
+        </div>
+        <div class="menu-card">
+          <div><div class="mc-name">4 Stagioni</div><div class="mc-desc">Pomodoro, fior di latte, prosciutto cotto, funghi, carciofi e olive.</div></div>
+          <div class="mc-price">€ 11</div>
+        </div>
+        <div class="menu-card">
+          <div><div class="mc-name">Calzone fritto</div><div class="mc-desc">Ripieno di ricotta, salame napoletano e ciccioli. Fritto in olio di semi.</div></div>
+          <div class="mc-price">€ 11</div>
+        </div>
+        <div class="menu-card featured">
+          <div><div class="mc-name">Pizza ai Frutti di Mare</div><div class="mc-desc">Base rossa, fior di latte, vongole, cozze, gamberi, aglio e prezzemolo.</div></div>
+          <div class="mc-price">€ 14</div>
+        </div>
+        <div class="menu-card">
+          <div><div class="mc-name">Pizza al Salmone</div><div class="mc-desc">Base bianca, fior di latte, salmone affumicato, rucola e grana.</div></div>
+          <div class="mc-price">€ 13</div>
+        </div>
+        <div class="menu-card">
+          <div><div class="mc-name">Capricciosa</div><div class="mc-desc">Pomodoro, fior di latte, prosciutto, funghi, carciofi, olive e uovo.</div></div>
+          <div class="mc-price">€ 12</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── CARNE & TERRA ──────────────────────────────────────── -->
+    <div class="menu-panel" id="panel-carne" role="tabpanel">
+      <div class="category-banner">
+        <span class="cat-icon">🥩</span>
+        <div>
+          <h2>Carne &amp; Terra</h2>
+          <p>Grigliate, paste tradizionali e piatti della tradizione veneta.</p>
+        </div>
+      </div>
+      <div class="menu-cards">
+        <div class="menu-card">
+          <div><div class="mc-name">Tagliata di manzo</div><div class="mc-desc">Con rucola, grana a scaglie e pomodorini. Al sangue o ben cotta.</div></div>
+          <div class="mc-price">€ 22</div>
+        </div>
+        <div class="menu-card">
+          <div><div class="mc-name">Grigliata mista di carne</div><div class="mc-desc">Salsiccia, costine, pollo e braciola di maiale alla brace con contorno.</div></div>
+          <div class="mc-price">€ 20</div>
+        </div>
+        <div class="menu-card">
+          <div><div class="mc-name">Cotoletta alla milanese</div><div class="mc-desc">Classica panata e fritta in burro chiarificato, con insalata mista.</div></div>
+          <div class="mc-price">€ 16</div>
+        </div>
+        <div class="menu-card">
+          <div><div class="mc-name">Pasta al ragù della casa</div><div class="mc-desc">Tagliatelle fresche con ragù lento di manzo e maiale. Un classico.</div></div>
+          <div class="mc-price">€ 13</div>
+        </div>
+        <div class="menu-card">
+          <div><div class="mc-name">Gnocchetti burro e salvia</div><div class="mc-desc">Gnocchi di patate fatti in casa, burro fuso, salvia e grana padano.</div></div>
+          <div class="mc-price">€ 12</div>
+        </div>
+        <div class="menu-card">
+          <div><div class="mc-name">Insalata mista / caprese</div><div class="mc-desc">Verdure di stagione, pomodori e mozzarella fresca con olio EVO.</div></div>
+          <div class="mc-price">€ 8</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── DOLCI ──────────────────────────────────────────────── -->
+    <div class="menu-panel" id="panel-dolci" role="tabpanel">
+      <div class="category-banner">
+        <span class="cat-icon">🍮</span>
+        <div>
+          <h2>Dolci</h2>
+          <p>Il finale perfetto per una cena de La Bastia.</p>
+        </div>
+      </div>
+      <div class="menu-cards">
+        <div class="menu-card">
+          <div><div class="mc-name">Tiramisù della casa</div><div class="mc-desc">Ricetta tradizionale in bicchiere con cacao amaro Van Houten.</div></div>
+          <div class="mc-price">€ 7</div>
+        </div>
+        <div class="menu-card">
+          <div><div class="mc-name">Panna cotta al limone</div><div class="mc-desc">Leggera e fresca, con coulis di frutti di bosco e menta.</div></div>
+          <div class="mc-price">€ 7</div>
+        </div>
+        <div class="menu-card">
+          <div><div class="mc-name">Semifreddo al pistacchio</div><div class="mc-desc">Con granella di pistacchio di Bronte e miele millefiori.</div></div>
+          <div class="mc-price">€ 8</div>
+        </div>
+        <div class="menu-card">
+          <div><div class="mc-name">Gelato artigianale</div><div class="mc-desc">Due o tre gusti a scelta, con panna montata o coulis di frutti.</div></div>
+          <div class="mc-price">€ 6</div>
+        </div>
+        <div class="menu-card">
+          <div><div class="mc-name">Selezione di formaggi</div><div class="mc-desc">Assortimento di formaggi locali con mostarda di Cremona e miele.</div></div>
+          <div class="mc-price">€ 10</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="menu-note">
+      Prezzi indicativi · Menu soggetto a variazioni stagionali ·
+      Comunicare eventuali allergie o intolleranze al personale prima di ordinare
+    </p>
+
+  </div>
+</section>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════════ -->
+<footer id="footer" role="contentinfo">
+  <div class="container footer-inner">
+    <div class="footer-logo">La <em>Bastia</em></div>
+    <p class="footer-tag">Ristorante · Pizzeria · Bar &nbsp;·&nbsp; Nogarole Rocca, Verona</p>
+    <nav class="footer-nav" aria-label="Link footer">
+      <a href="index.html">Home</a>
+      <a href="index.html#chi-siamo">Chi siamo</a>
+      <a href="menu.html">Menu</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+    <div class="footer-divider"></div>
+    <div class="footer-contacts">
+      <span>📍 Via Roma 36, 37060 Nogarole Rocca (VR)</span>
+      <a href="tel:+390456304370">📞 045 630 4370</a>
+      <a href="https://www.facebook.com/p/La-Bastia-pizzeria-ristorante-61551666945159/" target="_blank" rel="noopener">📘 Facebook</a>
+      <a href="https://www.instagram.com/labastiaristorantepizzeria/" target="_blank" rel="noopener">📸 Instagram</a>
+    </div>
+    <p class="footer-copy">© 2024 Ristorante Pizzeria La Bastia · P.IVA 000000000</p>
+  </div>
+</footer>
+
+<button id="scroll-top" aria-label="Torna in cima">↑</button>
+
+<script src="js/main.js"></script>
+<script src="js/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,449 @@
+/* ═══════════════════════════════════════════════════════════════
+   style.css — Stili condivisi La Bastia
+   (reset, variabili, utility, navbar, footer, mobile menu)
+═══════════════════════════════════════════════════════════════ */
+
+/* ─── RESET & BASE ─────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --rust:      #7B3118;
+  --rust-dk:   #5C2210;
+  --rust-mid:  #8B3A1E;
+  --amber:     #C17830;
+  --amber-lt:  #D4993E;
+  --cream:     #FBF5E8;
+  --cream-dk:  #F0E5CC;
+  --cream-md:  #F5EDDA;
+  --warm-white:#FFFDF8;
+  --text:      #2E1A0E;
+  --text-lt:   #6B4A36;
+  --white:     #FFFFFF;
+  --radius:    8px;
+  --ff-head:   'Playfair Display', Georgia, serif;
+  --ff-script: 'Dancing Script', cursive;
+  --ff-body:   'Lato', Arial, sans-serif;
+  --t:         0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ff-body);
+  color: var(--text);
+  background: var(--cream);
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ─── UTILITY ───────────────────────────────────────────────── */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-family: var(--ff-head);
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  color: var(--rust-dk);
+  text-align: center;
+  line-height: 1.15;
+}
+
+.section-title.on-dark {
+  color: var(--cream);
+}
+
+.amber-line {
+  display: block;
+  width: 56px;
+  height: 2px;
+  background: var(--amber);
+  margin: 0.9rem auto;
+}
+
+.section-sub {
+  font-size: 1rem;
+  color: var(--text-lt);
+  text-align: center;
+  max-width: 580px;
+  margin: 0 auto 3rem;
+  line-height: 1.75;
+}
+
+.section-sub.on-dark {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* ─── BOTTONI ───────────────────────────────────────────────── */
+.btn {
+  display: inline-block;
+  padding: 14px 34px;
+  border-radius: 2px;
+  font-family: var(--ff-body);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--t);
+  border: 2px solid transparent;
+}
+
+.btn-amber {
+  background: var(--amber);
+  color: var(--white);
+  border-color: var(--amber);
+}
+.btn-amber:hover {
+  background: var(--amber-lt);
+  border-color: var(--amber-lt);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+.btn-outline:hover {
+  background: var(--white);
+  color: var(--rust-dk);
+  border-color: var(--white);
+}
+
+.btn-rust {
+  background: var(--rust);
+  color: var(--white);
+  border-color: var(--rust);
+}
+.btn-rust:hover {
+  background: var(--rust-mid);
+  border-color: var(--rust-mid);
+}
+
+/* ─── PAGE HEADER (per pagine interne) ─────────────────────── */
+.page-header {
+  background: var(--rust-dk);
+  padding: 140px 0 64px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    135deg,
+    transparent,
+    transparent 40px,
+    rgba(193, 120, 48, 0.04) 40px,
+    rgba(193, 120, 48, 0.04) 80px
+  );
+}
+
+.page-header .ph-label {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--amber-lt);
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+
+.page-header h1 {
+  font-family: var(--ff-head);
+  font-size: clamp(2.4rem, 7vw, 4rem);
+  color: var(--white);
+  line-height: 1.1;
+  position: relative;
+}
+
+.page-header h1 em {
+  font-style: italic;
+  color: var(--amber-lt);
+}
+
+.page-header .ph-wave {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+}
+
+.page-header .ph-wave svg {
+  display: block;
+  width: 100%;
+}
+
+/* ─── NAVBAR ────────────────────────────────────────────────── */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 18px 0;
+  transition: background var(--t), padding var(--t), box-shadow var(--t);
+}
+
+#navbar.scrolled {
+  background: var(--rust-dk);
+  padding: 12px 0;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* navbar sempre scura sulle pagine interne */
+#navbar.always-dark {
+  background: var(--rust-dk);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: var(--ff-head);
+  font-size: 1.5rem;
+  color: var(--white);
+  letter-spacing: 0.02em;
+}
+
+.nav-logo em {
+  font-style: italic;
+  color: var(--amber-lt);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: color var(--t);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--amber-lt);
+}
+
+.nav-links .btn-amber {
+  padding: 10px 22px;
+  letter-spacing: 0.1em;
+  color: var(--white);
+}
+
+/* hamburger */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: var(--white);
+  transition: var(--t);
+}
+
+.nav-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ─── MOBILE MENU OVERLAY ───────────────────────────────────── */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--rust-dk);
+  z-index: 999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.mobile-menu.active {
+  display: flex;
+}
+
+.mobile-menu a {
+  color: var(--white);
+  font-family: var(--ff-head);
+  font-size: 1.9rem;
+  font-style: italic;
+  transition: color var(--t);
+}
+
+.mobile-menu a:hover,
+.mobile-menu a.active {
+  color: var(--amber-lt);
+}
+
+/* ─── FOOTER ────────────────────────────────────────────────── */
+#footer {
+  background: var(--rust-dk);
+  padding: 48px 0 24px;
+  border-top: 1px solid rgba(193, 120, 48, 0.25);
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.footer-logo {
+  font-family: var(--ff-head);
+  font-size: 1.8rem;
+  color: var(--white);
+}
+
+.footer-logo em {
+  font-style: italic;
+  color: var(--amber-lt);
+}
+
+.footer-tag {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 0.85rem;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 1.8rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-nav a {
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 0.78rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  transition: color var(--t);
+}
+
+.footer-nav a:hover {
+  color: var(--amber-lt);
+}
+
+.footer-divider {
+  width: 40px;
+  height: 1px;
+  background: rgba(193, 120, 48, 0.3);
+}
+
+.footer-contacts {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.footer-contacts a {
+  color: rgba(255, 255, 255, 0.55);
+  transition: color var(--t);
+}
+
+.footer-contacts a:hover {
+  color: var(--amber-lt);
+}
+
+.footer-copy {
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.72rem;
+  margin-top: 4px;
+}
+
+/* ─── SCROLL TOP ────────────────────────────────────────────── */
+#scroll-top {
+  position: fixed;
+  bottom: 26px;
+  right: 26px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--rust);
+  color: var(--white);
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s, background 0.2s;
+  z-index: 998;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+#scroll-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#scroll-top:hover {
+  background: var(--amber);
+}
+
+/* ─── RESPONSIVE NAVBAR ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+}

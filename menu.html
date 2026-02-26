@@ -3,13 +3,71 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Menu – La Bastia | Ristorante Pizzeria Nogarole Rocca</title>
-  <meta name="description" content="Il menu de La Bastia: antipasti, pesce fresco, pizza artigianale, carne alla griglia e dolci. Nogarole Rocca (VR)." />
+  <title>Menu – La Bastia | Ristorante Pizzeria Nogarole Rocca (VR)</title>
+  <meta name="description" content="Il menu de La Bastia di Nogarole Rocca (VR): antipasti, spaghetti allo scoglio, pesce fresco, pizza artigianale, carne alla griglia e dolci. Menu lavoro dal martedì al venerdì." />
+  <meta name="keywords" content="menu ristorante Nogarole Rocca, menu pesce Verona, pizza artigianale Verona, spaghetti allo scoglio, menu lavoro Verona, antipasti pesce, carne alla griglia Verona" />
+  <meta name="author" content="La Bastia Ristorante Pizzeria" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.labastia.it/menu.html" />
+
+  <!-- Theme color -->
+  <meta name="theme-color" content="#1a1206" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.labastia.it/menu.html" />
+  <meta property="og:title" content="Menu – La Bastia | Ristorante Pizzeria Nogarole Rocca" />
+  <meta property="og:description" content="Antipasti, pesce fresco, pizza artigianale, carne alla griglia e dolci. Scopri il menu completo de La Bastia a Nogarole Rocca (VR)." />
+  <meta property="og:image" content="https://www.labastia.it/img/spaghetti-scoglio.jpg" />
+  <meta property="og:image:alt" content="Spaghetti allo scoglio de La Bastia, piatto della casa" />
+  <meta property="og:locale" content="it_IT" />
+  <meta property="og:site_name" content="La Bastia Ristorante Pizzeria" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Menu – La Bastia | Ristorante Pizzeria Nogarole Rocca" />
+  <meta name="twitter:description" content="Pesce fresco, pizza artigianale, carne alla griglia e spaghetti allo scoglio. Il menu completo de La Bastia, Nogarole Rocca." />
+  <meta name="twitter:image" content="https://www.labastia.it/img/spaghetti-scoglio.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="shortcut icon" href="favicon.svg" />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/menu.css" />
+
+  <!-- Structured Data: Menu -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Menu",
+    "name": "Menu La Bastia",
+    "description": "Menu completo del Ristorante Pizzeria La Bastia di Nogarole Rocca (VR): antipasti, pesce, pizza, carne e dolci.",
+    "url": "https://www.labastia.it/menu.html",
+    "inLanguage": "it",
+    "offers": {
+      "@type": "Offer",
+      "availableAtOrFrom": {
+        "@type": "Restaurant",
+        "name": "La Bastia",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Via Roma 36",
+          "addressLocality": "Nogarole Rocca",
+          "postalCode": "37060",
+          "addressRegion": "VR",
+          "addressCountry": "IT"
+        }
+      }
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -249,8 +307,23 @@
 
 <button id="scroll-top" aria-label="Torna in cima">↑</button>
 
+<!-- ══ COOKIE BANNER (GDPR) ══════════════════════════════════ -->
+<div id="cookie-banner" role="dialog" aria-labelledby="cookie-title" hidden>
+  <div class="cookie-inner">
+    <div class="cookie-text">
+      <strong id="cookie-title">🍪 Informativa sui cookie</strong>
+      <p>Utilizziamo <strong>Google Analytics</strong> per capire come viene usato il sito, in forma completamente anonima. Puoi rifiutare senza che cambi nulla nella tua esperienza.</p>
+    </div>
+    <div class="cookie-btns">
+      <button id="cookie-reject" class="cookie-btn-reject">Rifiuta</button>
+      <button id="cookie-accept" class="cookie-btn-accept">Accetto</button>
+    </div>
+  </div>
+</div>
+
 <script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 <script src="js/menu.js"></script>
+<script src="js/analytics.js"></script>
 </body>
 </html>

@@ -183,6 +183,23 @@
   }
 }
 
+/* ─── FOTO SEZIONE MENU ─────────────────────────────────────── */
+.menu-img-row {
+  margin-top: 2.5rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  max-height: 380px;
+}
+
+.menu-section-photo {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 24px rgba(92, 34, 16, 0.15);
+}
+
 /* ─── TAB LAVORO ────────────────────────────────────────────── */
 .menu-tab--lavoro {
   color: var(--amber);
